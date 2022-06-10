@@ -1,0 +1,11 @@
+user-agent: *
+allow: /
+allow: /archives/
+allow: /categories/
+allow: /tags/
+allow: /about/
+allow: https://www.liaocp.cn/atom.xml
+disallow: /vendors/
+disallow: /fonts/
+disallow: /fancybox/
+sitemap: https://www.liaocp.cn/sitemap.xml

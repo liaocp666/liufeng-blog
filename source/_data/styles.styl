@@ -1,0 +1,109 @@
+@font-face {
+  font-family: Emoji;
+  src: local("Apple Color Emojiji"), local("Segoe UI Emoji"), local("Segoe UI Symbol"), local("Noto Color Emoji");
+  unicode-range: U+1F000-1F644, U+203C-3299;
+}
+.font-serif {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif !important;
+}
+.font-mono {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+:root {
+  --body-bg-color: #f4f4f4 !important;
+}
+
+.post-description {
+  display: none !important;
+}
+
+.post-gallery-image {
+  height: 200px;
+  width: 100%;
+}
+
+.header-inner, .main-inner>.comments, .main-inner>.pagination, .main-inner>.post-block, .main-inner>.sub-menu, .main-inner>.tabs-comment, .sidebar-inner {
+  box-shadow: 0px 0px 2px #627C9901 !important;
+}
+
+.main-inner>.comments, .main-inner>.pagination, .main-inner>.post-block, .main-inner>.sub-menu, .main-inner>.tabs-comment {
+  box-shadow: 0px 0px 2px #627C9901 !important;
+}
+
+.main-inner>.comments:not(:first-child):not(.sub-menu), .main-inner>.pagination:not(:first-child):not(.sub-menu), .main-inner>.post-block:not(:first-child):not(.sub-menu), .main-inner>.sub-menu:not(:first-child):not(.sub-menu), .main-inner>.tabs-comment:not(:first-child):not(.sub-menu) {
+  box-shadow: 0px 0px 2px #627C9901 !important;
+}
+
+.header-inner {
+  box-shadow: 0px 0px 2px #627C9901 !important;
+}
+
+.sidebar-inner {
+  box-shadow: 0px 0px 2px #627C9901 !important;
+}
+
+.site-description {
+  display: none !important;
+}
+
+.post-button {
+  display: none;
+}
+
+.posts-expand .post-header {
+  text-align: left;
+  margin-bottom: 11px;
+}
+
+.posts-expand .post-title {
+  font-size: 1.3em;
+}
+
+.post-meta {
+  justify-content: flex-start;
+}
+
+.index .post-body {
+  color: #797C80;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.index .post-body p {
+  margin: 0;
+}
+
+.post .post-body {
+    color: #121212;
+    font-size: 1em;
+}
+
+.post-title-link, .post-title {
+  color: #000;
+}
+
+@media screen and (min-width: 991px) {
+  .index .post-block {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .index .post-gallery-image {
+    height: 160px;
+    width: 240px;
+  }
+
+  .index .post-gallery {
+    min-height: 140px;
+  }
+
+  .post .post-gallery {
+    display: none;
+  }
+
+  .index .post-gallery {
+      margin-bottom: 0px;
+      margin-right: 15px;
+  }
+}

@@ -1,0 +1,18 @@
+{% if is_home() %}
+  <meta name="keywords" content="{{ config.keywords }}">
+  <meta name="description" content="{{ config.description }}">
+{% elseif is_post() %}
+  {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }},{{ config.title }}">
+  {% else %}
+    <meta name="keywords" content="{{ page.title }},{{ config.title }}">
+  {% endif %}
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+  {% else %}
+    <meta name="description" content="{{ strip_html(page.excerpt) }}">
+  {% endif %}
+{% else %}
+  <meta name="keywords" content="{{ page.title }},{{ config.title }}">
+  <meta name="description" content="{{ truncate(strip_html(page.content), 500) }}">
+{% endif %}
