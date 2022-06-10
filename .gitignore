@@ -7,3 +7,5 @@ public/
 .deploy*/
 _multiconfig.yml
 .obsidian
+yarn.lock
+package-lock.json
