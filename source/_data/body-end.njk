@@ -1,5 +1,6 @@
-<script>
-$(".index .post-block").each(function(index){
+<script type="text/javascript">
+document.addEventListener("pjax:success",()=>{
+    $(".index .post-block").each(function(index){
     let postBlock = $(this)
     let imgArray = postBlock.find('img')
     if (imgArray && imgArray.length > 0) {
@@ -9,4 +10,6 @@ $(".index .post-block").each(function(index){
         $(img).replaceWith(htmlStr)
     }
 })
+});
+
 </script>
