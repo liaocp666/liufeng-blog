@@ -1,0 +1,12 @@
+<script>
+$(".index .post-block").each(function(index){
+    let postBlock = $(this)
+    let imgArray = postBlock.find('img')
+    if (imgArray && imgArray.length > 0) {
+        let img = imgArray[0]
+        let href = postBlock.find('link').attr('href')
+        let htmlStr = `<a href="${href}"><img itemprop="contentUrl" src="${img.src}"/></a>`
+        $(img).replaceWith(htmlStr)
+    }
+})
+</script>
