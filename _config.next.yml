@@ -478,9 +478,9 @@ font:
 index_with_subtitle: true
 
 # Automatically add external URL with Base64 encrypt & decrypt.
-exturl: true
+exturl: false
 # If true, an icon will be attached to each external URL
-exturl_icon: true
+exturl_icon: false
 
 # Google Webmaster tools verification.
 # See: https://developers.google.com/search
@@ -541,7 +541,7 @@ mediumzoom: false
 
 # Vanilla JavaScript plugin for lazyloading images.
 # For more information: https://apoorv.pro/lozad.js/demo/
-lazyload: false
+lazyload: true
 
 # Pangu Support
 # For more information: https://github.com/vinta/pangu.js

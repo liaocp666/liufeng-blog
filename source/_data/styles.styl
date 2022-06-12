@@ -83,6 +83,30 @@
   color: #000;
 }
 
+.index .post-title-link {
+  transition: color .2s ease-in-out;
+}
+
+.index .post-title-link:hover {
+  color: #fc6423;
+  transition: color .2s ease-in-out;
+}
+
+.post .post-body a {
+  border-bottom: 0px;
+  color: #fc6423;
+  background: linear-gradient(to bottom, transparent 70%, #d4faff 70%);
+}
+
+.post .post-body a:hover {
+  color: #fc6423;
+  border-bottom: 0px;
+}
+
+.posts-expand .post-title-link:hover::before {
+  transform: scaleX(0);
+}
+
 @media screen and (min-width: 991px) {
   .index .post-block {
     display: flex;

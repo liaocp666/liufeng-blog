@@ -147,3 +147,6 @@ feed:
   icon: icon.png
   autodiscovery: true
   template:
+nofollow:
+  enable: true
+  field: site
