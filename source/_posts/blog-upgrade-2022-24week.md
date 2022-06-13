@@ -31,8 +31,8 @@ photos: [/thumbnail/upgrade.webp]
 
 ## 托管平台
 
-* 切换 [Github](https://github.com/liaocp66/blog) 托管
+* 切换 [Github](https://github.com/liaocp666/blog) 托管
 
 ## 自动构建
 
-* 使用 [java-webhook](https://github.com/liaocp66/java-webhook) 项目，监听 webhook，实现自动构建博客
+* 使用 [java-webhook](https://github.com/liaocp666/java-webhook) 项目，监听 webhook，实现自动构建博客
