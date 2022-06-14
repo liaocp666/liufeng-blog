@@ -155,7 +155,7 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  GitHub: https://github.com/liaocp66 || fab fa-github
+  GitHub: https://github.com/liaocp666 || fab fa-github
   E-Mail: mailto:2964556627@qq.com || fa fa-envelope
   Sitemap: /sitemap.xml || fa fa-sitemap
   RSS: /atom.xml || fa fa-square-rss
@@ -642,7 +642,7 @@ gitalk:
 # For more information: https://utteranc.es
 utterances:
   enable: true
-  repo: liaocp66/blog # Github repository owner and name
+  repo: liaocp666/blog # Github repository owner and name
   # Available values: pathname | url | title | og:title
   issue_term: pathname
   # Available values: github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
