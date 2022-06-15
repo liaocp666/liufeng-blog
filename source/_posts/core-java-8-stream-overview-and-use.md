@@ -1,11 +1,11 @@
 ---
 title: 流的基本概念以及常见应用
 date: 2022-06-15 20:10:06
-tags: [Java, JDK, Spring, SpringBoot]
+tags: [Java, JDK, 流, Stream]
 categories: 代码笔记
 url: core-java-8-stream-overview-and-use
 photos: [/thumbnail/java8_logo.webp]
-keywords: [Java, JDK, Spring, SpringBoot]
+keywords: [Java, JDK, 流, Stream]
 description: 流是一种指定的计算视图。流遵循“做什么而非怎么做”的原则，它比循环更易于阅读，可以让你以一种声明的方式处理数据。
 ---
 
