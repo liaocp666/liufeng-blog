@@ -133,9 +133,7 @@ Stream<Strirng> firstLette = wordds.stream().map(s -> s.substring(O, 1));
 
 通过传入参数（Function\<? super T , ? extends R\> mapper），将流中所有的元素产生的结果连接在一起产生一个新的流。
 
-例如：
-
-letters方法，将单词转为字母流返回。letters("boat")的返回值是：流["b", "o", "a", "t"]。
+例如：letters方法，将单词转为字母流返回。letters("boat")的返回值是：流["b", "o", "a", "t"]。
 
 ```java
 public static Stream<String> letters(String s) { 
@@ -155,7 +153,7 @@ Stream<Stream<String>> result = words.stream().map(w -> letters(w));
 
 上面代码的结果并不是我们想要的，我们想要的是单词流转为字母流，而不是一个流中还包含另一个流。
 
-这时就需要使用到 flatMap 方法，此方法会摊摊平流中包含的字母流。将流：\[\["y", “o”, "u", "r"\], \["b", "o", "a", "t"\]\] 摊平为 \["y", “o”, "u", "r","b", "o", "a", "t"\]。
+这时就需要使用到 flatMap 方法，此方法会摊平流中包含的字母流。将流：\[\["y", “o”, "u", "r"\], \["b", "o", "a", "t"\]\] 摊平为 \["y", “o”, "u", "r","b", "o", "a", "t"\]。
 
 ```java
 Stream<String> result = words.stream().flatMap(w -> letters(w));
@@ -206,7 +204,7 @@ Stream<String> longesFirst = words.stream().sorted(Comparator.comparing(String::
 
 **peek**
 
-在每次访问一个元素时，都会调用peek中的参数（功能方法），对于调试来说非常方便。
+在每次访问一个元素时，都会调用peek方法中的函数，对于调试来说非常方便。
 
 ```java
 Object[] powers = Stream.iterate(1.O, p -> p * 2)
@@ -276,7 +274,7 @@ String[] result = stream.toArray(String[]::new)
 stream.collect(Collectors.tolist());
 ```
 
-控制获得结果集和的种类
+控制获得结果集的类型
 
 ```java
 TreeSet<String> result = stream.collect(Collectors.toCollection(TreeSet::new));
@@ -288,7 +286,7 @@ TreeSet<String> result = stream.collect(Collectors.toCollection(TreeSet::new));
 String result = stream.collect(Collectors.joining())
 ```
 
-元素间加入分隔符收集
+元素间加入分隔符收集结果
 
 ```java
 String result = stream.collect(Collectors.joining("、"))
@@ -369,7 +367,7 @@ Map<String, List<Locale>> countryToLocales = locales.collect(
 Collectors.groupingBy(Locale::getCountry));
 ```
 
-当要分组的 key 为 boolean 类型时，使用 partitioningBy 更叫高效。
+当要分组的 key 为 boolean 类型时，使用 partitioningBy 更加高效。
 
 ```java
 Map<Boolean, List<Locale>> englishAndOtherLocales = locales.collect(
@@ -386,7 +384,7 @@ List<Locale> englishLocales = englishAndOtherLocales.get(true);
 如果要控制分组的 value 时，需要提供一个“下游收集器（downstream collector）”。例如我们想收集的value 为 set 类型，而非列表list。
 
 ```java
-Map<String, Set<Locale>> countryToLocaleSet = locales.collect(groupingBy(Locale::getCountry, Collectors.toSet()));
+Map<String, Set<Locale>> countryToLocaleSet = locales.collect(Collectors.groupingBy(Locale::getCountry, Collectors.toSet()));
 ```
 
 除了可以使用 toSet()，也可以使用 counting、summingInt、maxBy 等约简方法。
@@ -436,7 +434,7 @@ Stream<Integer> integers = IntStream.range(0, 100).boxed();
 
 ### 并行流
 
-上面代码所申明的流，都为串行流。串行流在遍历的时候，每个元素读完之后，再去读取下一个。而并行流就是将一个流的内容分成多个数据块，并用不同的线程分别处理每个不同数据块的流。
+并行流就是将一个流的内容分成多个数据块，并用不同的线程分别处理每个不同数据块的流。
 
 默认情况下，从有序集合（数组和列表）、范围、生成器和迭代产生的流，或者通过调用Stream.sorted 产生的流，都是有序的。它们的结果是按照原来元素的顺序累积的，因此是完全可预知的。如果运行相同的操作两次，将会得到完全相同的结果。
 
