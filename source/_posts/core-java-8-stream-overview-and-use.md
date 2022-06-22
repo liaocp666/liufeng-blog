@@ -1,5 +1,5 @@
 ---
-title: 流的基本概念以及常见应用
+title: Stream 流的基本概念以及常见应用
 date: 2022-06-15 20:10:06
 tags: [Java, JDK, 流, Stream]
 categories: 代码笔记
