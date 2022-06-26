@@ -1,6 +1,6 @@
 ---
 title: 电玩城日志
-date: 2022-06-27 05:26:36
+date: 2022-06-26 15:26:36
 tags: [我, 生活]
 categories: [生活日常]
 url: first-go-to-electronic-games
