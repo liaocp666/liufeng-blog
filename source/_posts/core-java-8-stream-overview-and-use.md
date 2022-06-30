@@ -80,7 +80,7 @@ Stream<String> silence = Stream.emty();
 Supplier\<T\>
 
 ```java
-Stream<String> echos = Stream.generate(() －＞"Echo");
+Stream<String> echos = Stream.generate(() -> "Echo");
 ```
 
 ```java
@@ -121,7 +121,7 @@ Stream<String> longWords = words.stream().filter(w -> w.length > 12);
 
 ```java
 // 流中所有的单词转换为小写
-Stream<String> 1 owe caseWords = words.stream().map(String::toLowerCase);
+Stream<String> lowerCaseWords = words.stream().map(String::toLowerCase);
 ```
 
 ```java
